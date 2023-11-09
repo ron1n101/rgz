@@ -2,14 +2,6 @@ from django.shortcuts import render
 from .models import *
 from django.views.generic import ListView, DetailView, CreateView, View
 
-# class HomeView(View):
-#     def get(self, request):
-#         home_page = Home.objects.all()
-#         context = {
-#             'home_view':home_page
-#         }
-
-#         return render(request, "blog/index.html", context)
 
 
 def home(request):
