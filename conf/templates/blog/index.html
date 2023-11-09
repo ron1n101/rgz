@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block categorys %}
+
+<section class="section-main">
+    {% for category in categories %}
+    <button type="button" class="btn btn-primary btn-lg">
+        <a class="whiteL" href="{% url 'category_detail' category.slug %}">{{ category.title }}</a>
+    </button>
+    {% endfor %}
+</section>
+
+
+{% endblock %}
+

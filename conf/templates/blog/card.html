@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block carts %}
+<section class="elem-wrapper">
+    <h5>Категорія: {{ category.title }}</h5>
+    {% for card in cards %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{ card.poster.url }}" class="card-img-top" alt="{{ card.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ card.title }}</h5>
+          <a href="{% url 'cards_detail' category_slug=card.category.slug card_slug=card.slug %}" class="btn btn-primary">Перейти до картки</a>
+        </div>
+    </div> 
+    {% endfor %}
+</section>
+{% endblock %}
+
+
+
