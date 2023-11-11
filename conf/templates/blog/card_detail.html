@@ -8,6 +8,16 @@
         <div class="card-body">
           <h5 class="card-title">{{ card.title }}</h5>
           <p class="card-text">{{ card.desc|safe }}</p>
+          
+          <div class="img-cart-shots">
+            <p>
+              {% for image in card.img_card.all %}
+                <img src = "{{ image.image.url }}" class = "img-fluid" alt="">
+              
+              {% endfor %}
+            </p>  
+          </div>
+          
         </div>
       </div>
 </section>
