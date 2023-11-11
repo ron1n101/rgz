@@ -39,4 +39,4 @@ class CartAdmin(admin.ModelAdmin):
     get_images.short_description = 'Зображення'    
 
 admin.site.register(Home)
-
+admin.site.register(CartShots)
