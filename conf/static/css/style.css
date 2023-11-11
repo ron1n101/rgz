@@ -1,4 +1,11 @@
+html {
+    height: 100%;
+}
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
     margin: 0;
     padding: 10px;
 }
@@ -9,18 +16,17 @@ header {
     border-radius: 6px;
     padding: 10px;
     margin-bottom: 10px;
-}
-.header-name {
-    text-align: right;
+    text-align: center;
 }
 footer {
+    min-width: calc(100% - 20px);
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
     border-color: rgba(0, 0, 0, 0.1);
     border-width: 0.6px;
     border-style: solid;
     border-radius: 6px;
-    margin-top: 10px;
-    padding: 10px;
-    text-align: center;
 }
 .footer-text {
     margin-bottom: 0px;
@@ -29,10 +35,11 @@ footer {
     color: white;
     text-decoration: none;
 }
-
 .section-main {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
     padding-top: 20px;
     padding-bottom: 20px;
     border-color: rgba(0, 0, 0, 0.1);
@@ -40,14 +47,16 @@ footer {
     border-style: solid;
     border-radius: 6px;
 }
-
+.btn-main {
+    height: 50px;
+    transform: scale(1.5);
+}
 .elem-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     row-gap: 20px;
 }
-
 .descrEl-wrapper {
     text-align: center;
     padding: 10px;
@@ -55,4 +64,13 @@ footer {
 .descrEl {
     width: 40%;
     margin: 0 auto;
+}
+.card {
+    transition: all 0.25s ease;
+}
+.card:hover {
+    transform: scale(1.07);
+}
+.descrEl:hover {
+    transform: scale(1);
 }
