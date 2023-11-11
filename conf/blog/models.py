@@ -38,3 +38,16 @@ class Cart(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class CartShots(models.Model):
+    title = models.CharField(max_length=128, db_index=True, blank=True)
+    image = models.ImageField(upload_to='blog/cart_shots')
+    cart = models.ForeignKey(Cart, verbose_name="Карточка", related_name="img_card", on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = "Зображення з карточки"
+        verbose_name_plural = "Зображення з карток"
+        pass
+    def __str__(self):
+        return self.title
